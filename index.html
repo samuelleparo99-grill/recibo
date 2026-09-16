@@ -480,8 +480,8 @@
   }
 
   function computeDerived(entry){
+    const totalVenta = num(entry.ventaCash) + num(entry.ventaTarjeta);
     const totalPropinas = num(entry.tipsCash) + num(entry.tipsTarjeta);
-    const totalVenta = (num(entry.ventaCash) + num(entry.ventaTarjeta)) - totalPropinas;
     const tips10 = num(entry.tipsTarjeta) * 0.10;
     return { totalVenta, totalPropinas, tips10 };
   }
